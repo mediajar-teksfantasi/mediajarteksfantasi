@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SASTRAKU - Media Pembelajaran Teks Fantasi</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#f5f3ff;color:#29233d;line-height:1.6}
+header{background:#6c4ab6;color:white;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+header h1{font-size:22px}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
+section{padding:70px 8%}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px
+}
+
+.hero-text{max-width:600px}
+.hero h2{font-size:45px;color:#51318e;margin-bottom:15px}
+.hero p{font-size:18px;color:#625b72;margin-bottom:25px}
+
+.button{
+display:inline-block;
+background:#6c4ab6;
+color:white;
+padding:12px 22px;
+border-radius:10px;
+text-decoration:none;
+border:none;
+cursor:pointer;
+font-size:15px
+}
+
+.hero-card{
+width:320px;
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px #00000014;
+text-align:center
+}
+
+.book{font-size:90px;margin-bottom:15px}
+
+.title{text-align:center;margin-bottom:35px}
+.title h2{color:#51318e;font-size:32px}
+.title p{color:#777}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 7px 20px #0000000f
+}
+
+.card h3{color:#5b3ca0;margin-bottom:10px}
+.icon{font-size:40px;margin-bottom:10px}
+
+.cerpen,.quiz-box{
+background:white;
+max-width:850px;
+margin:auto;
+padding:35px;
+border-radius:20px;
+box-shadow:0 7px 20px #0000000f
+}
+
+.cerpen h3{
+color:#51318e;
+margin-bottom:20px;
+text-align:center
+}
+
+.cerpen label{
+display:block;
+margin-top:15px;
+font-weight:bold
+}
+
+input,textarea,select{
+width:100%;
+padding:12px;
+margin-top:7px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px
+}
+
+textarea{
+min-height:150px;
+resize:vertical
+}
+
+.question{margin-bottom:25px}
+.question p{font-weight:bold;margin-bottom:10px}
+
+.question label{
+display:block;
+background:#f7f5fc;
+margin:7px 0;
+padding:10px;
+border-radius:8px;
+cursor:pointer
+}
+
+.result{
+margin-top:20px;
+padding:20px;
+border-radius:12px;
+background:#eee8ff;
+display:none;
+text-align:center
+}
+
+footer{
+background:#39245f;
+color:white;
+text-align:center;
+padding:25px
+}
+
+@media(max-width:700px){
+header{
+flex-direction:column;
+gap:10px
+}
+
+nav a{
+margin:0 5px;
+font-size:12px
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+justify-content:center
+}
+
+.hero h2{font-size:35px}
+.hero-card{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📖 SASTRAKU</h1>
+
+<nav>
+<a href="#beranda">Beranda</a>
+<a href="#materi">Materi</a>
+<a href="#fantasi">Teks Fantasi</a>
+<a href="#kuis">Kuis</a>
+<a href="#apresiasi">Apresiasi</a>
+</nav>
+</header>
+
+
+<!-- BERANDA -->
+
+<section class="hero" id="beranda">
+
+<div class="hero-text">
+
+<h2>Berimajinasi. Berpetualang. Berkarya.</h2>
+
+<p>
+SASTRAKU merupakan media pembelajaran interaktif
+untuk membantu peserta didik memahami teks fantasi,
+mulai dari pengertian, ciri-ciri, unsur, struktur,
+hingga mampu mengapresiasi dan menganalisisnya.
+</p>
+
+<a href="#materi" class="button">
+Mulai Belajar →
+</a>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="book">🧙‍♂️</div>
+
+<h3>Petualangan Fantasi</h3>
+
+<p>
+Masuki dunia penuh imajinasi,
+makhluk ajaib, tempat misterius,
+dan kejadian di luar logika.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MATERI -->
+
+<section id="materi">
+
+<div class="title">
+
+<h2>📚 Materi Teks Fantasi</h2>
+
+<p>
+Kenali dasar-dasar teks fantasi sebelum membaca dan menganalisisnya.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">✨</div>
+
+<h3>Pengertian Teks Fantasi</h3>
+
+<p>
+Teks fantasi adalah cerita yang mengembangkan
+imajinasi pengarang dengan menghadirkan tokoh,
+peristiwa, tempat, atau keadaan yang bersifat
+khayalan dan tidak selalu terjadi di dunia nyata.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🪄</div>
+
+<h3>Ciri-Ciri Teks Fantasi</h3>
+
+<p>
+Memiliki unsur imajinatif, menggunakan kejadian
+yang tidak biasa, menghadirkan dunia atau makhluk
+fantastis, serta dapat menggunakan latar yang
+melewati batas kenyataan.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🧩</div>
+
+<h3>Unsur Teks Fantasi</h3>
+
+<p>
+Unsur teks fantasi meliputi tema, tokoh,
+penokohan, alur, latar, sudut pandang,
+konflik, dan amanat.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🏰</div>
+
+<h3>Struktur Teks Fantasi</h3>
+
+<p>
+Struktur teks fantasi umumnya terdiri atas
+orientasi, komplikasi, dan resolusi.
+Struktur tersebut membentuk jalan cerita
+dari awal hingga penyelesaian konflik.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BACA TEKS FANTASI -->
+
+<section id="fantasi">
+
+<div class="title">
+
+<h2>🧙‍♂️ Baca Teks Fantasi</h2>
+
+<p>
+Bacalah teks fantasi berikut sebelum melakukan analisis.
+</p>
+
+</div>
+
+
+<div class="cerpen">
+
+<h3>Gerbang di Balik Hujan</h3>
+
+
+<p>
+Hujan turun deras sore itu. Arka berlari mencari tempat
+berteduh hingga akhirnya ia menemukan sebuah gerbang tua
+di tengah hutan yang belum pernah ia lihat sebelumnya.
+</p>
+
+<br>
+
+
+<p>
+Karena penasaran, Arka menyentuh gerbang tersebut.
+Tiba-tiba cahaya biru muncul dari sela-sela pintu.
+Ketika gerbang terbuka, Arka melihat sebuah dunia yang
+berbeda dari tempat tinggalnya.
+</p>
+
+<br>
+
+
+<p>
+Langit di dunia itu berwarna ungu. Pohon-pohon dapat
+berbicara dan burung-burung memiliki sayap yang
+memancarkan cahaya. Di kejauhan, berdiri sebuah kerajaan
+yang melayang di atas awan.
+</p>
+
+<br>
+
+
+<p>
+Seorang gadis bernama Elara datang menghampirinya.
+Ia mengatakan bahwa kerajaan mereka sedang terancam
+oleh penyihir gelap yang ingin menguasai sumber cahaya
+di tengah kerajaan.
+</p>
+
+<br>
+
+
+<p>
+Arka yang awalnya ingin segera kembali akhirnya memilih
+membantu Elara. Dengan keberanian dan kerja sama,
+mereka berhasil menemukan sumber cahaya tersebut dan
+mengalahkan penyihir gelap.
+</p>
+
+<br>
+
+
+<p>
+Setelah semuanya selesai, gerbang kembali terbuka.
+Arka pun kembali ke dunia asalnya. Sejak saat itu,
+ia menyadari bahwa keberanian terkadang muncul ketika
+seseorang berani menghadapi sesuatu yang belum pernah
+ia kenal sebelumnya.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ANALISIS -->
+
+<section id="analisis">
+
+<div class="title">
+
+<h2>🔎 Analisis Teks Fantasi</h2>
+
+<p>
+Identifikasi unsur-unsur dari teks fantasi yang telah kamu baca.
+</p>
+
+</div>
+
+
+<div class="cerpen">
+
+<label>Tema</label>
+
+<input
+type="text"
+placeholder="Tuliskan tema teks fantasi..."
+>
+
+
+<label>Tokoh dan Penokohan</label>
+
+<textarea
+placeholder="Tuliskan tokoh dan karakter tokoh..."
+></textarea>
+
+
+<label>Alur</label>
+
+<select>
+
+<option>Pilih alur</option>
+<option>Alur maju</option>
+<option>Alur mundur</option>
+<option>Alur campuran</option>
+
+</select>
+
+
+<label>Latar</label>
+
+<textarea
+placeholder="Tuliskan latar tempat, waktu, dan suasana..."
+></textarea>
+
+
+<label>Unsur Fantasi</label>
+
+<textarea
+placeholder="Tuliskan bagian cerita yang menunjukkan unsur fantasi..."
+></textarea>
+
+
+<label>Amanat</label>
+
+<textarea
+placeholder="Apa pesan yang kamu dapatkan dari cerita?"
+></textarea>
+
+
+<br>
+
+<button
+class="button"
+onclick="alert('Analisis berhasil disimpan!')"
+>
+Simpan Analisis
+</button>
+
+</div>
+
+</section>
+
+
+<!-- KUIS -->
+
+<section id="kuis">
+
+<div class="title">
+
+<h2>🧠 Kuis Interaktif</h2>
+
+<p>
+Uji pemahamanmu setelah mempelajari materi teks fantasi.
+</p>
+
+</div>
+
+
+<div class="quiz-box">
+
+<form id="quizForm">
+
+
+<div class="question">
+
+<p>
+1. Teks fantasi merupakan teks yang banyak menggunakan...
+</p>
+
+<label>
+<input type="radio" name="q1" value="a">
+A. Fakta sejarah
+</label>
+
+<label>
+<input type="radio" name="q1" value="b">
+B. Imajinasi
+</label>
+
+<label>
+<input type="radio" name="q1" value="c">
+C. Data penelitian
+</label>
+
+</div>
+
+
+<div class="question">
+
+<p>
+2. Salah satu ciri teks fantasi adalah...
+</p>
+
+<label>
+<input type="radio" name="q2" value="a">
+A. Mengandung kejadian imajinatif
+</label>
+
+<label>
+<input type="radio" name="q2" value="b">
+B. Selalu berdasarkan fakta
+</label>
+
+<label>
+<input type="radio" name="q2" value="c">
+C. Tidak memiliki tokoh
+</label>
+
+</div>
+
+
+<div class="question">
+
+<p>
+3. Tokoh yang terdapat dalam cerita berfungsi sebagai...
+</p>
+
+<label>
+<input type="radio" name="q3" value="a">
+A. Pelaku cerita
+</label>
+
+<label>
+<input type="radio" name="q3" value="b">
+B. Judul cerita
+</label>
+
+<label>
+<input type="radio" name="q3" value="c">
+C. Tempat kejadian
+</label>
+
+</div>
+
+
+<div class="question">
+
+<p>
+4. Struktur teks fantasi yang berisi pengenalan tokoh
+dan latar disebut...
+</p>
+
+<label>
+<input type="radio" name="q4" value="a">
+A. Resolusi
+</label>
+
+<label>
+<input type="radio" name="q4" value="b">
+B. Orientasi
+</label>
+
+<label>
+<input type="radio" name="q4" value="c">
+C. Komplikasi
+</label>
+
+</div>
+
+
+<div class="question">
+
+<p>
+5. Bagian teks yang berisi penyelesaian konflik disebut...
+</p>
+
+<label>
+<input type="radio" name="q5" value="a">
+A. Orientasi
+</label>
+
+<label>
+<input type="radio" name="q5" value="b">
+B. Komplikasi
+</label>
+
+<label>
+<input type="radio" name="q5" value="c">
+C. Resolusi
+</label>
+
+</div>
+
+
+<button
+type="button"
+class="button"
+onclick="hitungNilai()"
+>
+Lihat Nilai
+</button>
+
+</form>
+
+
+<div class="result" id="result">
+
+<h2 id="nilai"></h2>
+
+<p id="pesan"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- APRESIASI -->
+
+<section id="apresiasi">
+
+<div class="title">
+
+<h2>✍️ Ruang Apresiasi</h2>
+
+<p>
+Sampaikan pendapatmu terhadap teks fantasi yang telah dibaca.
+</p>
+
+</div>
+
+
+<div class="cerpen">
+
+<label>Nama</label>
+
+<input
+type="text"
+id="nama"
+placeholder="Masukkan nama"
+>
+
+
+<label>
+Menurutmu, apa pesan paling penting dari
+teks fantasi "Gerbang di Balik Hujan"?
+</label>
+
+<textarea
+id="pendapat"
+placeholder="Tuliskan pendapatmu..."
+></textarea>
+
+<br>
+
+
+<button
+class="button"
+onclick="kirimApresiasi()"
+>
+Kirim Apresiasi
+</button>
+
+
+<div
+class="result"
+id="apresiasiResult"
+>
+
+<h3>Terima kasih! 🎉</h3>
+
+<p id="apresiasiText"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 SASTRAKU — Media Pembelajaran Teks Fantasi
+</p>
+
+<p>
+Dikembangkan sebagai proyek pembelajaran berbasis teknologi.
+</p>
+
+</footer>
+
+
+<script>
+
+function hitungNilai(){
+
+let benar=0;
+
+const jawaban={
+q1:"b",
+q2:"a",
+q3:"a",
+q4:"b",
+q5:"c"
+};
+
+for(const q in jawaban){
+
+if(
+document.querySelector(
+'input[name="'+q+'"]:checked'
+)?.value===jawaban[q]
+)
+
+benar++;
+
+}
+
+let nilai=benar*20;
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("nilai").innerText=
+"Nilai kamu: "+nilai;
+
+document.getElementById("pesan").innerText=
+
+nilai>=80
+?"🎉 Sangat baik! Kamu sudah memahami materi teks fantasi."
+:
+nilai>=60
+?"👍 Cukup baik. Coba pelajari materi kembali."
+:
+"📚 Jangan menyerah. Pelajari materi dan coba lagi.";
+
+}
+
+
+function kirimApresiasi(){
+
+let nama=
+document.getElementById("nama").value;
+
+let pendapat=
+document.getElementById("pendapat").value;
+
+if(!nama||!pendapat){
+
+alert(
+"Silakan lengkapi nama dan pendapat terlebih dahulu."
+);
+
+return;
+
+}
+
+document.getElementById(
+"apresiasiResult"
+).style.display="block";
+
+document.getElementById(
+"apresiasiText"
+).innerText=
+"Pendapat dari "+nama+
+" berhasil dikirim. Terima kasih sudah berpartisipasi!";
+
+}
+
+</script>
+
+</body>
+</html>
